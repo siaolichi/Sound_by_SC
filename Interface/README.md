@@ -1,19 +1,19 @@
 # Interface
 
-<h1>MidiMix</h1>
-- KNOB（利用Pdefn改數值）:
+<h1>MidiMix使用方法</h1>
+- KNOB（利用Pdefn改數值）
 <pre>
 ~knob[0][0].action_({|butt|
 Pdefn(\drum3_amp, butt.value);
 });
 </pre>
-- SLIDER（利用Pdefn改數值）:
+- SLIDER（利用Pdefn改數值）
 <pre>
 ~slider[0].action_({|butt, mod|
 Pdefn(\sound_amp,butt.value);
 };
 </pre>
-- MUTE PAD:
+- MUTE PAD
 <pre>
 ~mutePad[0].action_({|butt, mod|
 if(butt.value==1,{
@@ -23,7 +23,7 @@ if(butt.value==1,{
 });
 };);
 </pre>
-- RecArmPAD:
+- RecArm PAD
 <pre>
 ~recArmPad[0].action_({|butt, mod|
 if(butt.value==1,{
