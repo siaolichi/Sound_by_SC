@@ -1,6 +1,6 @@
 # Interface
 
-<h1>MidiMix使用方法</h1>
+<h2>MidiMix使用方法</h2>
 - KNOB（利用Pdefn改數值）
 <pre>
 ~knob[0][0].action_({|butt|
