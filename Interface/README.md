@@ -1,13 +1,13 @@
 # Interface
 
 <h2>MidiMix使用方法</h2>
-- KNOB（利用Pdefn改數值）
+- KNOB(利用Pdefn改數值)
 <pre>
 ~knob[0][0].action_({|butt|
 Pdefn(\drum3_amp, butt.value);
 });
 </pre>
-- SLIDER（利用Pdefn改數值）
+- SLIDER(利用Pdefn改數值)
 <pre>
 ~slider[0].action_({|butt, mod|
 Pdefn(\sound_amp,butt.value);
