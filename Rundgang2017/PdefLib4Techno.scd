@@ -1,4 +1,4 @@
-Pdefn(\beat, 60/138);
+Pdefn(\beat, 60/120);
 Pdef(\drum,{Pbind(
 	\instrument,       \drum,
 	\dur,                   Pdefn(\beat)/4,//Pseq([2,2,4,1,4,1,2,1,4,1,4,4,8,2,2,4,1,3,2,8,1,1,1,1]*0.125,inf),
@@ -43,7 +43,7 @@ Pdef(\drum3,{Pbind(
 	\decay,            1,
 	\fdecay,           2,
 	\attack,            Pdefn(\drum3_attack)
-)});
+)}).play;
 Pdef(\drum4,{Pbind(
 	\instrument,       \drum4,
 	\dur,              Pdefn(\beat)/2,//Pseq([2,2,4,1,4,1,2,1,4,1,4,4,8,2,2,4,1,3,2,8,1,1,1,1]*0.125,inf),
@@ -52,7 +52,7 @@ Pdef(\drum4,{Pbind(
 	\decay,            1,
 	\fdecay,           0.1,
 	\attack,            0.1,
-)});
+)}).play;
 Pdef(\bssine3,{Pbind(
 	\instrument,        \bssine,
 	\dur, 			       Pdefn(\beat)/4,

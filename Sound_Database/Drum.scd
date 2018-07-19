@@ -2,7 +2,7 @@ SynthDef(\drum_basic,{
 	arg amp=1;
 	var amp_env, phase_env, phase, freq, dur, p5, p5_verb, verb_env;
 
-	freq = 80;
+	freq = 100;
 	amp_env   = EnvGen.ar(Env.perc(1e-6,0.25));
 	phase_env = EnvGen.ar(Env.perc(1e-6,0.125));
 	verb_env = EnvGen.ar(Env.perc(0.01,0.3), doneAction:2);

@@ -34,11 +34,11 @@ SynthDef(\alien,
 	}
 ).add;
 SynthDef(\alien2,
-	{ arg out = 0, freq=2000, freqFM=200, fmi = 100.5, decay=0.5, amp = 0.5, pan = 0, attack = 1, freqDecay = 16;
+	{ arg out = 0, freq=40, freqFM=100, fmi = 10.5, decay=0.5, amp = 0.5, pan = 0, attack = 1, freqDecay = 16;
 		var window, ratio=0.1;
-		freq = LFNoise1.ar(0.1)*800+300;
+		freq = LFNoise1.ar(0.1)*100+300;
 		window = Env.perc(attack, decay, amp);
-		OffsetOut.ar(out*1.5, Pan2.ar(SinOsc.ar( SinOsc.ar(freqFM) * fmi +freq), pan) * EnvGen.ar(window, doneAction:2)*LFPulse.kr(10))
+		OffsetOut.ar(out*1.5, Pan2.ar(SinOsc.ar( LFNoise1.ar(freqFM) * fmi +freq), pan) * EnvGen.ar(window, doneAction:2)*LFPulse.kr(20))
 	}
 ).add;
 SynthDef(\blingbling,
